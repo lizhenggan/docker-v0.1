@@ -1,18 +1,21 @@
 nginx:
-    image: index.alauda.cn/library/nginx
+    image: nginx:v1.0
     links:
         - mysql
         - redis
         - phpfpm
     ports:
         - "81:80"
+        - "443:443"
     volumes:
         - /var/www:/usr/share/nginx/html
+        - ./nginx.conf:/etc/nginx/nginx.conf
+        - ./conf.d:/etc/nginx/conf.d
 
 mysql:
     image: index.alauda.cn/library/mysql
     environment:
-        MYSQL_ROOT_PASSWORD: chqy10725
+        MYSQL_ROOT_PASSWORD: qazasdedc123
     ports:
         - "3307:3306"
 
@@ -24,6 +27,6 @@ redis:
 phpfpm:
     image: php-fpm:v5.6
     volumes:
-        - /var/www/html:/usr/share/nginx/html
+        - /var/www:/var/www/html
     ports:
         - "9001:9000"
