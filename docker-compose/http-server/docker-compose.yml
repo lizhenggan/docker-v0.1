@@ -30,6 +30,8 @@ redis:
 
 phpfpm:
     image: php-fpm:v5.6
+    links:
+        - mysql
     volumes:
         - /var/www:/var/www/html
     ports:
