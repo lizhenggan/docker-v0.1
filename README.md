@@ -23,16 +23,16 @@ git clone https://github.com/lizhenggan/docker.git
 ```
 sudo docker build -t nginx:v1.0 .   
 ```
-> 在容器内命名nginx 为 v1.0 .  （需要在docker-compose/nginx目录内执行，否则需指定执行目录）
+> 需要在docker-compose/nginx目录内执行，否则需指定执行目录
 
 # 编译安装php-fpm镜像
 ```
 sudo docker build -t php-fpm:v5.6 .  
 ```
->　在容器内命名php-fpm为v5.6　（需要在doker-compose/php-fpm内执行,否则需指定执行目录）
+> 需要在doker-compose/php-fpm内执行,否则需指定执行目录
 
 # 配置docker　
-> （目录：docker-compose/docker-compose/http-server/docker-compose.yml）　注意主机路径与docker对应容器的名称如　image:nginx:v1.0 
+> （目录：docker-compose/docker-compose/http-server/docker-compose.yml）　注意主机路径与docker对应的名称如　image:nginx:v1.0 
 
 # 新建nginx配置所需文件目录
 ```
@@ -70,7 +70,7 @@ docker-compose exec 容器名称 bash
  cd /usr/local/bin  
  ./docker-php-ext-install pdo_mysql  
  ```
-> 在phpfpm容器内部安装扩展。参考网址 http://blog.csdn.net/tinyjian/article/details/55006624
+> 在phpfpm容器内部安装扩展。
 
 # git自动部署
 
