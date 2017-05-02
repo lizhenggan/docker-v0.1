@@ -1,6 +1,6 @@
 # docker
 docker environment configuration file  docker部署环境配置
-#系统ubuntu16.04  基于 灵雀云
+# 系统ubuntu16.04  基于 灵雀云
 # 安装docker
 ```
 apt install docker  ／／安装docker
