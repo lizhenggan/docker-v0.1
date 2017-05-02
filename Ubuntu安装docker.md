@@ -1,10 +1,10 @@
 # 安装docker
 ```
-apt inseall docker  ／／安装docker
+apt install docker  ／／安装docker
 ```
 # 安装docker-compose
 ```
-apt insall docker-compose
+apt install docker-compose
 ```
 # 克隆docker到本地目录
 ```
