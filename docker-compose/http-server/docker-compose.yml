@@ -5,8 +5,8 @@ nginx:
         - redis
         - phpfpm
     ports:
-        - "80:80"
-        - "443:443"
+        - "81:80"
+        - "444:443"
     volumes:
         - /var/www:/usr/share/nginx/html
         - ./nginx.conf:/etc/nginx/nginx.conf
@@ -17,7 +17,7 @@ mysql:
     environment:
         MYSQL_ROOT_PASSWORD: qazasdedc123
     ports:
-        - "3306:3306"
+        - "3307:3306"
     volumes:
         - ./mysql.cnf:/etc/mysql/my.cnf
         - ./mysql.d:/etc/mysql/conf.d
@@ -29,10 +29,10 @@ redis:
         - "6379:6379"
 
 phpfpm:
-    image: php-fpm:v5.6
+    image: phpfpm:5.6
     links:
         - mysql
     volumes:
         - /var/www:/var/www/html
     ports:
-        - "9000:9000"
+        - "9001:9000"
